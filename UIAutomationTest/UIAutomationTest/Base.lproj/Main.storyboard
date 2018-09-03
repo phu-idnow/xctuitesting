@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pAB-Np-ccX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="KGN-nR-kJK">
+            <objects>
+                <viewController id="w7t-zC-iZe" customClass="ViewController" customModule="UIAutomationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pc2-Rk-PQX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDP-79-NzQ">
+                                <rect key="frame" x="41" y="259" width="292" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailTextField" label="Email TextField">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Utm-q4-koy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="w7t-zC-iZe" id="H3c-R2-1wu"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0t-rx-mv7">
+                                <rect key="frame" x="41" y="311" width="292" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordTextField" label="Password TextField">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yLq-Dv-dNr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="w7t-zC-iZe" id="nTi-3d-rnn"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHF-nQ-IG0">
+                                <rect key="frame" x="127" y="363" width="121" height="44"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton" label="Login Button">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="F6O-Er-yQF" kind="show" id="BBq-nQ-gQI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28235294119999998" green="0.60392156860000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="view1" label="View 1">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="n0t-rx-mv7" firstAttribute="leading" secondItem="Tta-g0-b6M" secondAttribute="leading" constant="41" id="3Ba-sW-cCh"/>
+                            <constraint firstItem="XHF-nQ-IG0" firstAttribute="top" secondItem="n0t-rx-mv7" secondAttribute="bottom" constant="8" id="3Xt-6X-uh8"/>
+                            <constraint firstItem="Tta-g0-b6M" firstAttribute="trailing" secondItem="iDP-79-NzQ" secondAttribute="trailing" constant="42" id="4UB-1F-gOG"/>
+                            <constraint firstItem="Tta-g0-b6M" firstAttribute="trailing" secondItem="XHF-nQ-IG0" secondAttribute="trailing" constant="127" id="8va-Py-NYn"/>
+                            <constraint firstItem="n0t-rx-mv7" firstAttribute="top" secondItem="iDP-79-NzQ" secondAttribute="bottom" constant="8" id="B2s-Mc-nQz"/>
+                            <constraint firstItem="n0t-rx-mv7" firstAttribute="height" secondItem="iDP-79-NzQ" secondAttribute="height" id="dS9-tI-BGE"/>
+                            <constraint firstItem="iDP-79-NzQ" firstAttribute="leading" secondItem="Tta-g0-b6M" secondAttribute="leading" constant="41" id="ewc-z7-wGW"/>
+                            <constraint firstItem="XHF-nQ-IG0" firstAttribute="height" secondItem="n0t-rx-mv7" secondAttribute="height" id="nNE-oU-pea"/>
+                            <constraint firstItem="XHF-nQ-IG0" firstAttribute="leading" secondItem="Tta-g0-b6M" secondAttribute="leading" constant="127" id="osE-lK-75N"/>
+                            <constraint firstItem="iDP-79-NzQ" firstAttribute="top" secondItem="Tta-g0-b6M" secondAttribute="top" constant="195" id="wDn-fy-veB"/>
+                            <constraint firstItem="Tta-g0-b6M" firstAttribute="trailing" secondItem="n0t-rx-mv7" secondAttribute="trailing" constant="42" id="zi5-gq-lA7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tta-g0-b6M"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="clV-oP-bny"/>
+                    <connections>
+                        <outlet property="loginButton" destination="XHF-nQ-IG0" id="j9C-NG-eeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tPc-Qc-TN8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="117.39130434782609"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="TIB-q4-emW">
+            <objects>
+                <viewController id="F6O-Er-yQF" customClass="ViewController2" customModule="UIAutomationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ShZ-l8-vKt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" translatesAutoresizingMaskIntoConstraints="NO" id="PIF-tc-u1D">
+                                <rect key="frame" x="67" y="212" width="240" height="242"/>
+                                <accessibility key="accessibilityConfiguration" identifier="smileyImage" label="Smile ImageView">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28235294119999998" green="0.60392156860000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="view2" label="View 2">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="EV0-Cn-r7F" firstAttribute="trailing" secondItem="PIF-tc-u1D" secondAttribute="trailing" constant="68" id="500-vO-ntN"/>
+                            <constraint firstItem="PIF-tc-u1D" firstAttribute="top" secondItem="EV0-Cn-r7F" secondAttribute="top" constant="148" id="DLm-7m-ytT"/>
+                            <constraint firstItem="EV0-Cn-r7F" firstAttribute="bottom" secondItem="PIF-tc-u1D" secondAttribute="bottom" constant="213" id="X96-Bn-GQk"/>
+                            <constraint firstItem="PIF-tc-u1D" firstAttribute="leading" secondItem="EV0-Cn-r7F" secondAttribute="leading" constant="67" id="XWc-Bp-62k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EV0-Cn-r7F"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhm-tt-MXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5999999999999" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1K5-ay-BKd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pAB-Np-ccX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vUP-9R-ZNw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w7t-zC-iZe" kind="relationship" relationship="rootViewController" id="wRg-8V-upf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nu-KV-1m8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="smiley" width="1000" height="1000"/>
+    </resources>
+</document>
